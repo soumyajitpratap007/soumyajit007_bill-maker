@@ -1,0 +1,21 @@
+{
+  "name": "Bill Maker — India",
+  "short_name": "Bill Maker",
+  "description": "GST invoices, quotations, receipts and delivery challans in seconds.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2563eb",
+  "lang": "en-IN",
+  "categories": ["business", "finance", "productivity"],
+  "orientation": "portrait-primary",
+  "icons": [
+    { "src": "/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" },
+    { "src": "/apple-icon.png", "sizes": "192x192", "type": "image/png" }
+  ],
+  "shortcuts": [
+    { "name": "New bill", "short_name": "New", "url": "/bills/new" },
+    { "name": "Bills", "short_name": "Bills", "url": "/bills" }
+  ]
+}

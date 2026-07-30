@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #ffffff;
+  --fg: #0f172a;
+  --muted: #64748b;
+  --card: #ffffff;
+  --border: #e2e8f0;
+  --brand: #2563eb;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0b1220;
+    --fg: #e2e8f0;
+    --muted: #94a3b8;
+    --card: #0f172a;
+    --border: #1f2937;
+    --brand: #60a5fa;
+  }
+}
+
+html, body { height: 100%; }
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Print / PDF surface: A4 canvas at 96dpi = 794 x 1123 px */
+.bill-a4 {
+  width: 794px;
+  min-height: 1123px;
+  background: #ffffff;
+  color: #0f172a;
+  margin: 0 auto;
+}
+
+@media print {
+  body { background: #fff; }
+  .no-print { display: none !important; }
+  .bill-a4 { box-shadow: none !important; margin: 0 !important; }
+}
+
+/* Scrollbar polish */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 8px; }
+::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+
+/* Focus ring */
+.focus-ring:focus-visible {
+  outline: 2px solid var(--brand);
+  outline-offset: 2px;
+  border-radius: 8px;
+}
